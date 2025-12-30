@@ -14,7 +14,7 @@ cache:
   enable: true
 
 # Remove unnecessary files after hexo generate.
-minify: false
+minify: true
 
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
@@ -37,13 +37,13 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+scheme: Gemini
 #scheme: Mist
 #scheme: Pisces
 #scheme: Gemini
 
 # Dark Mode
-darkmode: false
+darkmode: true
 
 # Light-Dark Mode
 lightdark:
@@ -165,6 +165,7 @@ site_state: true
 social:
   GitHub: https://github.com/BinaryKita || fab fa-github
   E-Mail: 1841778329@qq.com || fa fa-envelope
+  Bilibili: https://space.bilibili.com/440171372 || fab fa-bilibili
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Twitter: https://twitter.com/yourname || fab fa-twitter
   #FB Page: https://www.facebook.com/yourname || fab fa-facebook
