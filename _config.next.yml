@@ -84,13 +84,10 @@ creative_commons:
 open_graph:
   enable: true
   options:
-    #twitter_card: <twitter:card>
-    #twitter_id: <twitter:creator>
-    #twitter_site: <twitter:site>
-    #twitter_image: <twitter:image>
-    #google_plus: <g+:profile_link>
-    #fb_admins: <fb:admin_id>
-    #fb_app_id: <fb:app_id>
+    type: blog
+    twitter_card: summary_large_image
+    site_name: BinaryKita
+    image: /images/og-default.jpg
 
 
 # ---------------------------------------------------------------
