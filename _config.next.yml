@@ -162,7 +162,9 @@ site_state: true
 social:
   GitHub: https://github.com/BinaryKita || fab fa-github
   E-Mail: 1841778329@qq.com || fa fa-envelope
-  Bilibili: https://space.bilibili.com/440171372 || fab fa-bilibili
+  Bilibili: https://space.bilibili.com/440171372/dynamic || fab fa-bilibili
+  QQ: https://qzone.qq.com/1841778329 || fab fa-qq
+  WeChat: /images/wechat_qr.jpg || fab fa-weixin
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Twitter: https://twitter.com/yourname || fab fa-twitter
   #FB Page: https://www.facebook.com/yourname || fab fa-facebook
@@ -285,10 +287,9 @@ reward:
 # Subscribe through Telegram Channel, Twitter, etc.
 # Usage: `Key: permalink || icon` (Font Awesome)
 follow_me:
-  #Twitter: https://twitter.com/username || fab fa-twitter
-  #Telegram: https://t.me/channel_name || fab fa-telegram
-  #WeChat: /images/wechat_channel.png || fab fa-weixin
-  #RSS: /atom.xml || fa fa-rss
+  Bilibili: https://space.bilibili.com/440171372/dynamic || fab fa-bilibili
+  WeChat: /images/wechat_qr.jpg || fab fa-weixin
+  RSS: /atom.xml || fa fa-rss
 
 # Related popular posts
 # Dependencies: https://github.com/next-theme/hexo-posts-embedding
