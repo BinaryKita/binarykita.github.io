@@ -100,18 +100,16 @@ open_graph:
 # External url should start with http:// or https://
 menu:
   home: / || fa fa-home
-  about: /about/ || fa fa-user
-  tags: /tags/ || fa fa-tags
-  categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
-  #schedule: /schedule/ || fa fa-calendar
-  #sitemap: /sitemap.xml || fa fa-sitemap
-  #commonweal: /404/ || fa fa-heartbeat
+  categories: /categories/ || fa fa-th
+  tags: /tags/ || fa fa-tags
+  projects: /projects/ || fa fa-code
+  about: /about/ || fa fa-user
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
   icons: true
-  badges: false
+  badges: true
 
 
 # ---------------------------------------------------------------
@@ -163,15 +161,10 @@ social:
   GitHub: https://github.com/BinaryKita || fab fa-github
   E-Mail: 1841778329@qq.com || fa fa-envelope
   Bilibili: https://space.bilibili.com/440171372/dynamic || fab fa-bilibili
-  QQ: tencent://message/?uin=1841778329&Site=BinaryKita&Menu=yes || fab fa-qq
+  QQ: https://BinaryKita.github.io/images/qq_qr.jpg || fab fa-qq
   WeChat: https://BinaryKita.github.io/images/wechat_qr.jpg || fab fa-weixin
-  #Weibo: https://weibo.com/yourname || fab fa-weibo
-  #Twitter: https://twitter.com/yourname || fab fa-twitter
-  #FB Page: https://www.facebook.com/yourname || fab fa-facebook
-  #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
-  #YouTube: https://youtube.com/yourname || fab fa-youtube
-  #Instagram: https://instagram.com/yourname || fab fa-instagram
-  #Skype: skype:yourname?call|chat || fab fa-skype
+  CSDN: https://blog.csdn.net/OIaker?type=blog || fab fa-csdn
+  Zhihu: https://www.zhihu.com/people/mo-ren-shi-xue-ba-61 || fab fa-zhihu
 
 social_icons:
   enable: true
@@ -288,7 +281,8 @@ reward:
 # Usage: `Key: permalink || icon` (Font Awesome)
 follow_me:
   Bilibili: https://space.bilibili.com/440171372/dynamic || fab fa-bilibili
-  WeChat: /images/wechat_qr.jpg || fab fa-weixin
+  CSDN: https://blog.csdn.net/OIaker?type=blog || fab fa-csdn
+  Zhihu: https://www.zhihu.com/people/mo-ren-shi-xue-ba-61 || fab fa-zhihu
   RSS: /atom.xml || fa fa-rss
 
 # Related popular posts
