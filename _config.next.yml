@@ -267,12 +267,12 @@ tag_icon: false
 # Front-matter variable (nonsupport animation).
 reward_settings:
   # If true, a donate button will be displayed in every article by default.
-  enable: false
-  animation: false
+  enable: true
+  animation: true
 
 reward:
-  #wechatpay: /images/wechatpay.png
-  #alipay: /images/alipay.png
+  wechatpay: /images/wechat_pay.jpg
+  alipay: /images/alipay.jpg
   #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
 
@@ -282,13 +282,13 @@ follow_me:
   Bilibili: https://space.bilibili.com/440171372/dynamic || fab fa-bilibili
   CSDN: https://blog.csdn.net/OIaker?type=blog || fab fa-csdn
   Zhihu: https://www.zhihu.com/people/mo-ren-shi-xue-ba-61 || fab fa-zhihu
-  RSS: /atom.xml || fa fa-rss
+  #RSS: /atom.xml || fa fa-rss
 
 # Related popular posts
 # Dependencies: https://github.com/next-theme/hexo-posts-embedding
 # Or: https://github.com/sergeyzwezdin/hexo-related-posts
 related_posts:
-  enable: false
+  enable: true
   icon: fa fa-signs-post
 
 # Post edit
