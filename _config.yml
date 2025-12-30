@@ -67,8 +67,18 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  算法: algo
+  题解: sol
 tag_map:
-
+  数据结构: ds
+  动态规划: dp 
+  杂项: misc
+  图论: graph
+  机器学习: ml
+  数学: math
+  几何: geo
+  字符串: str
+  
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true

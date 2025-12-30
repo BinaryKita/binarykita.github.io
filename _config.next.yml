@@ -103,7 +103,6 @@ menu:
   archives: /archives/ || fa fa-archive
   categories: /categories/ || fa fa-th
   tags: /tags/ || fa fa-tags
-  projects: /projects/ || fa fa-code
   about: /about/ || fa fa-user
 
 # Enable / Disable menu icons / item badges.
