@@ -1,5 +1,5 @@
 ---
 title: Hello World
-descriptino: Hello world. test.
+description: Hello world. test.
 ---
 test. test.
