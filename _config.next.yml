@@ -177,7 +177,7 @@ links_settings:
   layout: block
 
 links:
-  #Title: https://example.com
+  AUG: 43.156.122.23:11451/?key=dmpreview2025
 
 # Table of Contents in the Sidebar
 # Front-matter variable (nonsupport wrap expand_all).
