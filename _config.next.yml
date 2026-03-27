@@ -379,7 +379,7 @@ codeblock:
     enable: true
     height: 500
   # Display language name
-  language: false
+  language: true
 
 back2top:
   enable: true
@@ -655,7 +655,7 @@ pace:
 # Generate a ribbon in your website with HTML5 canvas.
 # For more information: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: true
+  enable: false
   size: 300 # The width of the ribbon
   alpha: 0.6 # The transparency of the ribbon
   zIndex: -1 # The display level of the ribbon
