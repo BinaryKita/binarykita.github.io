@@ -115,3 +115,8 @@ deploy:
 
 related_posts:
   enable: true
+
+algolia:
+  applicationID: "KE30672TA3"
+  apiKey: "3fb156f1ac04fcc6bb66e0155b6ca612"
+  indexName: "dev_BLOG"

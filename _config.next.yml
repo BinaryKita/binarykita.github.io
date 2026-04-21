@@ -748,10 +748,12 @@ isso: # <data_isso>
 
 # AddToAny Share. See: https://www.addtoany.com
 addtoany:
-  enable: false
+  enable: true
   # Example: bottons: [facebook, twitter]
   buttons:
-
+    - wechat
+    - qq
+    - bilibili
 
 # ---------------------------------------------------------------
 # Statistics and Analytics
@@ -761,7 +763,7 @@ addtoany:
 # Google Analytics
 # See: https://analytics.google.com
 google_analytics:
-  tracking_id: # <app_id>
+  tracking_id: G-0BPM3LECNV
   # By default, NexT will load an external gtag.js script on your site.
   # If you only need the pageview feature, set the following option to true to get a better performance.
   only_pageview: false
@@ -770,7 +772,7 @@ google_analytics:
 
 # Baidu Analytics
 # See: https://tongji.baidu.com
-baidu_analytics: # <app_id>
+baidu_analytics: 55fdeb9556b798eed9a7c713952b0ad9
 
 # Cloudflare Web Analytics
 # See: https://www.cloudflare.com/web-analytics/
