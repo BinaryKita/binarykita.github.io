@@ -27,6 +27,8 @@ jobs:
           key: ${{ runner.OS }}-npm-cache
           restore-keys: |
             ${{ runner.OS }}-npm-cache
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
       - name: Install Dependencies
         run: npm install
       - name: Build
@@ -35,8 +37,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-      - name: Install Pandoc
-        run: sudo apt-get update && sudo apt-get install -y pandoc
   deploy:
     needs: build
     permissions:
