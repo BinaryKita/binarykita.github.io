@@ -113,9 +113,7 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: https://github.com/BinaryKita/BinaryKita.github.io
-  branch: main
+  type: 
 
 related_posts:
   enable: true
