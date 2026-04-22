@@ -35,6 +35,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
   deploy:
     needs: build
     permissions:
