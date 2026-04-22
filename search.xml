@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>线性优化策略</title>
-    <url>/title/</url>
+    <url>/linear%20optimize/</url>
     <content><![CDATA[<div class="note "><p>本文部分内容参考自 <span class="exturl" data-url="aHR0cHM6Ly9vaS13aWtpLm9yZy8=">OI-WIKI<i class="fa fa-external-link-alt"></i></span>.</p>
 </div>
 <h1 id="维护操作类型">维护操作类型</h1>
@@ -74,7 +74,7 @@ S_{x,y} = a_{x,y} + S_{x-1,y} + S_{x,y-1} - S_{x-1,y-1}
 <p>查询时，我们通过容斥计算 <span class="math display">\[
 S_{x_r,y_r} - S_{x_l-1, y_r} - S_{x_r, y_l-1} + S_{x_l-1,y_l-1}
 \]</span></p>
-<img data-src="/title/two-dimension-sum.png" class="">
+<img data-src="/linear%20optimize/two-dimension-sum.png" class="">
 <p>二维差分同理。</p>
 <h2 id="树上前缀和">树上前缀和</h2>
 <p>给定一棵树，我们需要很快地求出 <span
