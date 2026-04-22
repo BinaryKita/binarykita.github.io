@@ -158,7 +158,6 @@ site_state: true
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
   GitHub: https://github.com/BinaryKita || fab fa-github
-  E-Mail: 1841778329@qq.com || fa fa-envelope
   Bilibili: https://space.bilibili.com/440171372/dynamic || fab fa-bilibili
   QQ: https://BinaryKita.github.io/images/qq_qr.jpg || fab fa-qq
   WeChat: https://BinaryKita.github.io/images/wechat_qr.jpg || fab fa-weixin
@@ -753,7 +752,6 @@ addtoany:
   buttons:
     - wechat
     - qq
-    - bilibili
 
 # ---------------------------------------------------------------
 # Statistics and Analytics
