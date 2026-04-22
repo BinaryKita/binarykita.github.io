@@ -750,7 +750,7 @@ addtoany:
   # Example: bottons: [facebook, twitter]
   buttons:
     - wechat
-    - qq
+    - qqzone
 
 # ---------------------------------------------------------------
 # Statistics and Analytics
