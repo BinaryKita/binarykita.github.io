@@ -45,6 +45,8 @@ relative_link: false
 future: true
 syntax_highlighter: highlight.js
 highlight:
+  exclude_languages:
+    - mermaid
   line_number: true
   auto_detect: false
   tab_replace: ''
