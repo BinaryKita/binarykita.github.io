@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>线性优化策略</title>
+    <url>/title/</url>
+    <content><![CDATA[<div class="note "><p>本文部分内容参考自 <span class="exturl" data-url="aHR0cHM6Ly9vaS13aWtpLm9yZy8=">OI-WIKI<i class="fa fa-external-link-alt"></i></span>.</p>
+</div>
+<h1 id="维护操作类型">维护操作类型</h1>
+<p>在维护数据结构的过程中，我们通常会进行一些操作。大体上，可以将这些操作分为以下几类：</p>
+<ul>
+<li><strong>单点查询/修改</strong>：对单个位置上的值进行查询/修改</li>
+<li><strong>区间查询/修改</strong>：对一个区间上的值进行查询/修改</li>
+</ul>
+<h1 id="前缀和与差分">前缀和与差分</h1>
+<p>设一个二元操作为 <span class="math inline">\(+\)</span>，其逆操作为
+<span class="math inline">\(-\)</span>. 数据为 <span
+class="math inline">\(a_0,a_1,\dots,a_n\)</span>.</p>
+<h2 id="前缀和">前缀和</h2>
+<p>当我们需要 <span class="math inline">\(O(1)\)</span> 进行如 <span
+class="math inline">\(a_l + a_{l+1} + \dots + a_r\)</span> 这样的
+<strong>区间查询</strong> 时，可以使用前缀和维护。</p>
+<p>我们预先用 <span class="math inline">\(O(n)\)</span> 维护一个数组
+<span class="math display">\[
+S_i = a_0 + a_1 + \dots + a_i
+\]</span></p>
+<p>每次查询 <span class="math inline">\([l,r]\)</span>
+区间的二元运算和时，直接计算 <span class="math display">\[
+S_r - S_{l-1}
+\]</span> 即可。</p>
+<h2 id="差分">差分</h2>
+<p>当我们需要 <span class="math inline">\(O(1)\)</span> 对数据进行如“给
+<span class="math inline">\([l, r]\)</span> 区间内的每个值都加上 <span
+class="math inline">\(k\)</span>”这样的 <strong>区间修改</strong>
+操作，且最后只需要 <strong>很少</strong> 的 <strong>单点查询</strong>
+时，可以使用差分维护。</p>
+<p>我们预先维护一个差分数组 <span class="math display">\[
+D_i = a_i - a_{i-1}
+\]</span></p>
+<p>每次区间修改时，进行操作 <span class="math display">\[
+D_l \leftarrow D_l + k,\quad D_{r+1} \leftarrow D_{r+1} - k
+\]</span></p>
+<p>单点查询第 <span class="math inline">\(i\)</span> 个值时，只需计算
+<span class="math display">\[
+D_0 + D_1 + \dots + D_i
+\]</span></p>
+<div class="note "><p>显然，前缀和与差分是一对互逆操作。</p>
+</div>
+<h2 id="条件">条件</h2>
+<p>并非所有二元运算都能满足前缀和与差分操作。</p>
+<ul>
+<li>可满足的运算如：加法，模意义下加法，无零乘法，异或等；</li>
+<li>不可满足的运算如：取最大/最小值，最大公因数，最小公倍数，减法等。</li>
+</ul>
+<p>结论是，一个二元运算可满足前缀和与差分操作的充要条件为：该运算在对应集合上构成一个
+<strong>群</strong>。即满足：</p>
+<ul>
+<li>结合律</li>
+<li>单位元</li>
+<li>逆元</li>
+</ul>
+<h2 id="二维前缀和">二维前缀和</h2>
+<p>给定一个二维矩阵 <span
+class="math inline">\(a_{i,j}\)</span>，当我们需要 <span
+class="math inline">\(O(1)\)</span> 求左上角为 <span
+class="math inline">\((x_l,y_l)\)</span>、右下角为 <span
+class="math inline">\((x_r,y_r)\)</span>
+的子矩阵之和时，可以使用二维前缀和维护。</p>
+<p>类似一维前缀和，我们维护 <span class="math display">\[
+S_{x,y} = \sum_{0 \le i \le x,\ 0 \le j \le y} a_{i,j}
+\]</span></p>
+<p>具体地，递推式为 <span class="math display">\[
+S_{x,y} = a_{x,y} + S_{x-1,y} + S_{x,y-1} - S_{x-1,y-1}
+\]</span></p>
+<p>查询时，我们通过容斥计算 <span class="math display">\[
+S_{x_r,y_r} - S_{x_l-1, y_r} - S_{x_r, y_l-1} + S_{x_l-1,y_l-1}
+\]</span></p>
+<img data-src="/title/two-dimension-sum.png" class="">
+<p>二维差分同理。</p>
+<h2 id="树上前缀和">树上前缀和</h2>
+<p>给定一棵树，我们需要很快地求出 <span
+class="math inline">\((u,v)\)</span>
+两节点构成的简单路径上点权的和。下面我们用 <span
+class="math inline">\((u,v)\)</span> 表示 <span
+class="math inline">\((u,v)\)</span> 简单路径上点权的和，<span
+class="math inline">\(fa(x)\)</span> 表示 <span
+class="math inline">\(x\)</span> 的父节点。</p>
+<p>类似一维前缀和，我们维护 <span class="math display">\[
+S_p = (root,p)
+\]</span></p>
+<p>每次查询时，先求出 <span
+class="math inline">\(lca(u,v)\)</span>，答案即 <span
+class="math display">\[
+S_u + S_v - S_{lca} - S_{fa(lca)}
+\]</span></p>
+<p>树上差分同理。</p>
+<h2 id="高维前缀和">高维前缀和</h2>
+<p>对于二维以上的前缀和，即 <span class="math inline">\(k(k &gt;
+2)\)</span> 维前缀和，当我们需要求 <span class="math display">\[
+\sum_{l_1 \le i_1 \le r_1} \sum_{l_2 \le i_2 \le r_2} \cdots \sum_{l_k
+\le i_k \le r_k} a_{i_1,i_2,\dots,i_k}
+\]</span> 时，若依然直接使用容斥法维护，转移复杂度会达到 <span
+class="math inline">\(O(N2^K)\)</span>，其中 <span
+class="math inline">\(N\)</span> 为数组总大小。</p>
+<p>注意到上式本质上是沿着 <span class="math inline">\(k\)</span>
+个维度分别做求和。于是我们可以每次固定一维进行求和，做若干次一维前缀和即可。这样预处理复杂度为
+<span class="math inline">\(O(kN)\)</span>，一般可以接受。</p>
+<p>查询时依旧需要容斥，复杂度为 <span
+class="math inline">\(O(2^k)\)</span>。</p>
+<h3 id="子集和-dpsosdp">子集和 DP(SOSDP)</h3>
+<p>当 <span class="math inline">\(k\)</span> 的值很大时，会出现一类
+<strong>子集和</strong> (Sum Over Subsets, SOS)
+问题，这是高维前缀和的一个特例。</p>
+<p>问题描述：考虑大小为 <span class="math inline">\(n\)</span>
+的集合的全体子集上定义的函数 <span
+class="math inline">\(f\)</span>，现在要求出其子集和函数 <span
+class="math inline">\(g\)</span>，其满足 <span class="math display">\[
+g(S) = \sum_{T \subseteq S} f(T)
+\]</span> 即 <span class="math inline">\(g(S)\)</span> 等于其所有子集
+<span class="math inline">\(T \subseteq S\)</span> 上的函数值 <span
+class="math inline">\(f(T)\)</span> 之和。</p>
+<p>首先，子集和问题可以写成高维前缀和的形式。注意到，<span
+class="math inline">\(S\)</span> 的子集可以通过状态压缩表示为长度为
+<span class="math inline">\(n\)</span> 的 <span
+class="math inline">\(0/1\)</span> 串 <span
+class="math inline">\(s\)</span>。将串的每一位看作一个维度，则子集的包含关系等价于下标的大小关系，即
+<span class="math display">\[
+T \subseteq S \iff \forall i,\ t_i \le s_i
+\]</span></p>
+<p>因此，对子集求和，本质上就是对这个 <span
+class="math inline">\(n\)</span> 维数组求高维前缀和，时间复杂度为 <span
+class="math display">\[
+O(n2^n)
+\]</span></p>
+<p>其逆操作依旧可以通过容斥进行。</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>杂项</tag>
+      </tags>
+  </entry>
+</search>
