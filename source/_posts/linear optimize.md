@@ -1,5 +1,5 @@
 ---
-title: 线性优化策略
+title: 线性优化策略（更新中）
 description: 前缀和、差分、双指针、离散化
 tags:
  - 杂项
@@ -9,6 +9,10 @@ categories:
 
 {% note %}
 本文部分内容参考自 [OI-WIKI](https://oi-wiki.org/).
+{% endnote %}
+
+{% note %}
+本文使用GPT进行润色.
 {% endnote %}
 
 # 维护操作类型
